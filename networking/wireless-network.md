@@ -10,7 +10,7 @@ Use radio waves or other wireless signals to connect various devices
 
 ## Wireless Router
 
-Similar to a plain old router, routes network traffic wirlessly
+Similar to a plain old router, routes network traffic ([packets](packets.md)) wirlessly
 
 #### Components
 
@@ -39,3 +39,5 @@ Similar to a plain old router, routes network traffic wirlessly
 1) **2.4 GHz:** Older wifi standards. Better at penetrating walls, but more prone to interference.
 2) **5 GHz:** Newer wifi standards. Faster speed, shorter range.
 3) **Cellular Bands:** For 4G (LTE) and 5G. From 700MHz (low range) - 2.6GHz (mid range) - 28GHz+ (high range)
+
+Next, read about [Network Security](network-security.md)
