@@ -45,6 +45,17 @@ FIB - The routes actually being used
     - I don't care if the user requested this message... does the mesage contain malware?
     - More CPU expensive
 
+## Quality of Service
+
+Influence packet performance of traffic queues
+
+How high priority are certain types of traffic?
+
+- Tos (Type of Service)
+- CoS (Class of Service)
+- DSCP (Differentiated Services Code Point)
+- Wi-Fi Multimedia (WMM)
+
 ## Questions
 
 - 802.x (port security)
@@ -62,7 +73,7 @@ FIB - The routes actually being used
 
 - Peering tables (and how they could bring down the internet)
 
-- Site magic and OSPF
+- Site magic and OSPF(Open Shortest Path First) (SW-WAN) (Hello/dead intervals)
 
 - R16 routers
 
@@ -79,3 +90,14 @@ FIB - The routes actually being used
     - Rogue DHCP servers
 
 - SLAAC
+
+- What is AV
+
+- Autonomous Systems
+    - Stub
+    - Multihome
+    - Transit
+
+- Dynamic Routing Protocols
+    - Interior Gatway Protocol (IGP)
+    - Exterior Gateway Protocol (EGP)
