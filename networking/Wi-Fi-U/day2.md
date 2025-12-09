@@ -59,15 +59,41 @@ How high priority are certain types of traffic?
 ## Questions
 
 - 802.x (port security)
+    - uses things like RADIUS to control access per user on the port level
 
-- EAP (extensible)
+- EAP (extensible authentication protocol)
+    - This is a protocol framework - not a protocol itself.
+    - It defines requirements for protocols that share authentication information
+    - Consists of 3 components:
+        1. EAP Peer (the device or user seeking authentication)
+        2. EAP Authenticator (Network entity that recieves the authentication requests from the peer (switch, etc). Forwards requests to the EAP Server)
+        3. EAP Server (Verifies credentials and grants/denies access)
 
 - RADIUS
+    - [RADIUS](https://www.cbtnuggets.com/blog/technology/networking/what-is-radius)
+    - Remote Authentication Dial-In User Service
+    - RADIUS is a network protocol providing centralized authentication and authorization for network access
+    - RADIUS provides Authentication, Authorization, and Accounting managment for users on a network (AAA)
+    - Users are required to authenticate before being granted network access
+    - Client vs Server:
+        1. RADIUS Client is a switch or other network device that is configured to restrict access with RADIUS
+        2. RADIUS Server is a server that the client reports to when a user requests access. The server looks up the user in the company's identity system (Azure AD, ect.) to check if the user has access.
+    - Example:
+        - A user connects their laptop to an ethernet port leading to a switch that is a RADIUS client.
+        - The switch asks the user for credientials
+        - The switch (client) forwards the credentials to the RADIUS server
+        - The server queries Azure AD with the credientials. The is allowed access.
+        - THe server responds to the switch saying the user has access. The switch grants the user access to the network.
 
 - Routing tables
     - Are routes just within your local network?
+    (NO, routes tell the router how to reach another network)
+    - [Routing Tables](https://www.youtube.com/watch?v=CGmTvukObOw)
 
-- PPOE
+- PPPoE
+    - PPP (point to point protocol) over ethernet
+    - used in DSL networks or other networks where you need to be able to authenticate before using internet
+    - Allows ISPs to monotor and control who can use the internet when many locations are using the same cabling
 
 - Border Gateway (and internal border gateway)
 
